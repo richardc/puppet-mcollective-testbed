@@ -37,4 +37,13 @@ user that's just for it in the middleware.
 
 ---
 
+Verification
+------------
 
+A server.cfg needs a few things before it'll start, a 
+
+should we verify these keys are present?
+
+If we do a more static parameterised classes model then verifcation of required
+keys falls out of it, but then so does a lot of extra hassle to support new
+options addeed to the config file.
