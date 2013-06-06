@@ -1,0 +1,17 @@
+direct_addressing = 1
+plugin.activemq.pool.size = <%= @activemq_servers.size %>
+<%  
+i = 0
+@activemq_servers.each do |server|
+  i = i + 1
+%>
+plugin.activemq.pool.<%= i %>.host = <%= server %>
+plugin.activemq.pool.<%= i %>.port = 61614
+plugin.activemq.pool.<%= i %>.user = mcollective
+plugin.activemq.pool.<%= i %>.password = <%= @activemq_mcollective_password %>
+plugin.activemq.pool.<%= i %>.ssl = 1
+plugin.activemq.pool.<%= i %>.ssl.ca = <%= scope['::settings::ssldir'] %>/certs/ca.pem
+plugin.activemq.pool.<%= i %>.ssl.cert = <%= scope['::settings::ssldir'] %>/certs/<%= scope['::clientcert'] %>.pem
+plugin.activemq.pool.<%= i %>.ssl.key = <%= scope['::settings::ssldir'] %>/private_keys/<%= scope['::clientcert'] %>.pem
+plugin.activemq.pool.<%= i %>.ssl.fallback = 0
+<% end %>

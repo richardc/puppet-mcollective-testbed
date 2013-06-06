@@ -1,0 +1,15 @@
+topicprefix = /topic/
+main_collective = mcollective
+collectives = mcollective
+libdir = /usr/libexec/mcollective
+logfile = /var/log/mcollective.log
+loglevel = info
+daemonize = 1
+
+# Plugins
+securityprovider = <%= scope['mcollective::server::securityprovider'] %>
+
+connector = <%= scope['mcollective::server::connector'] %>
+
+# Facts
+factsource = <%= scope['mcollective::server::factsource'] %>
