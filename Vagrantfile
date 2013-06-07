@@ -9,7 +9,7 @@ Vagrant::Config.run do |config|
     puppet.module_path    = "modules"
     puppet.manifests_path = "manifests"
     # puppet.manifest_file  = "node.pp"
-    puppet.manifest_file  = "bigass_define.pp"
+    puppet.manifest_file  = "inifile.pp"
   end
 
 end
