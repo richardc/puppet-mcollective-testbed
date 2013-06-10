@@ -16,3 +16,7 @@
 [submodule "modules/inifile"]
 	path = modules/inifile
 	url = git@github.com:cprice-puppet/puppetlabs-inifile.git
+[submodule "modules/mcollective"]
+	path = modules/mcollective
+	url = git@github.com:richardc/puppet-mcollective.git
+	branch = master
