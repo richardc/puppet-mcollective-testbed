@@ -1,8 +1,4 @@
-class { 'puppetlabs_repos': } -> 
-class { 'mcollective':
-  activemq_hosts => [ 'localhost'],
-}
-class { 'mcollective::middleware::activemq': } ->
-class { 'mcollective::server': }
+class { 'puppetlabs_repos': } -> Class['mcollective']
 
-class { 'mcollective::client': } <- Class['puppetlabs_repos']
+# a use of import - I am a professional stunt man
+import "/vagrant/modules/mcollective/spec/fixtures/manifests/end_to_end.pp"
