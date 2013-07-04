@@ -31,11 +31,11 @@ class puppetlabs_repos {
   }
 
   if $::osfamily == 'Debian' {
-    file { '/etc/apt/sources.list.d/puppetlabs.list':
-      content => "deb http://apt.puppetlabs.com precise main dependencies\n",
-    } ~>
-    exec { '/usr/sbin/apt-get update':
-      refreshonly => true,
+    apt::source { 'puppetlabs':
+      location   => 'http://apt.puppetlabs.com',
+      repos      => 'main dependencies',
+      key        => '4BD6EC30',
+      key_server => 'pgp.mit.edu',
     }
   }
 }
