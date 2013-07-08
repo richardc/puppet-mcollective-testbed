@@ -2,10 +2,6 @@
 	path = modules/stdlib
 	url = git@github.com:puppetlabs/puppetlabs-stdlib.git
 	branch = master
-[submodule "modules/concat"]
-	path = modules/concat
-	url = git@github.com:ripienaar/puppet-concat.git
-	branch = master
 [submodule "modules/java_ks"]
 	path = modules/java_ks
 	url = git@github.com:puppetlabs/puppetlabs-java_ks.git
