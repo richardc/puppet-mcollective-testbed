@@ -14,7 +14,7 @@ Vagrant::Config.run do |config|
   end
 
   config.vm.provision :puppet do |puppet|
-    puppet.module_path    = "modules"
+    puppet.module_path    = [ "modules", "modules/mcollective/spec/fixtures/modules" ]
     puppet.manifests_path = "manifests"
     puppet.manifest_file  = "site.pp"
   end
