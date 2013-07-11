@@ -1,4 +1,4 @@
-class { 'puppetlabs_repos': } -> Package <| |>
+class { 'puppetlabs_repos': }
 
 if $::osfamily == 'RedHat' {
   package { 'hiera':

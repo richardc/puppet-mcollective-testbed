@@ -27,7 +27,8 @@ class puppetlabs_repos {
         failovermethod => 'priority',
         gpgcheck       => '0',
         mirrorlist     => 'https://mirrors.fedoraproject.org/metalink?repo=epel-6&arch=$basearch',
-    }
+    } ->
+    Package <| |>
   }
 
   if $::osfamily == 'Debian' {
@@ -36,6 +37,7 @@ class puppetlabs_repos {
       repos      => 'main dependencies',
       key        => '4BD6EC30',
       key_server => 'pgp.mit.edu',
-    }
+    } ->
+    Package <| |>
   }
 }
