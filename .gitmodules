@@ -19,3 +19,6 @@
 [submodule "modules/datacat"]
 	path = modules/datacat
 	url = git@github.com:richardc/puppet-datacat.git
+[submodule "modules/activemq"]
+	path = modules/activemq
+	url = https://github.com/puppetlabs/puppetlabs-activemq.git
