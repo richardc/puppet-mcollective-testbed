@@ -1,0 +1,4 @@
+V	140912210926Z		01	unknown	/CN=server
+V	140912211602Z		02	unknown	/CN=root
+V	140912211631Z		03	unknown	/CN=nagios
+V	140912211638Z		04	unknown	/CN=vagrant
