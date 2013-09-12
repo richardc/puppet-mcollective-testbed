@@ -19,3 +19,9 @@
 [submodule "modules/datacat"]
 	path = modules/datacat
 	url = git@github.com:richardc/puppet-datacat.git
+[submodule "modules/rabbitmq"]
+	path = modules/rabbitmq
+	url = git@github.com:puppetlabs/puppetlabs-rabbitmq.git
+[submodule "modules/erlang"]
+	path = modules/erlang
+	url = https://github.com/garethr/garethr-erlang
