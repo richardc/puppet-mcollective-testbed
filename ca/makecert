@@ -1,0 +1,33 @@
+#!/bin/bash
+
+if [ "$1" = "" ]
+then
+    echo "Usage: $0 name"
+    exit
+fi
+
+set -e
+
+name=$1
+# make private key
+openssl genrsa \
+    -out private/${name}.pem \
+    2048
+
+# make csr
+openssl req -new \
+    -key private/${name}.pem \
+    -out req.pem \
+    -outform PEM \
+    -subj /CN=${name} \
+    -nodes
+
+# sign it
+openssl ca \
+    -config openssl.cnf \
+    -in req.pem \
+    -out certs/${name}.pem \
+    -notext \
+    -batch
+
+rm req.pm
