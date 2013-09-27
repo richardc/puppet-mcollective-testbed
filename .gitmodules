@@ -11,7 +11,7 @@
 	url = git@github.com:puppetlabs/puppetlabs-kwalify.git
 [submodule "modules/mcollective"]
 	path = modules/mcollective
-	url = git@github.com:richardc/puppet-mcollective.git
+	url = https://github.com/puppetlabs/puppetlabs-mcollective
 	branch = master
 [submodule "modules/apt"]
 	path = modules/apt
