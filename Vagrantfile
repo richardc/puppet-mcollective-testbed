@@ -1,16 +1,15 @@
 # -*- mode: ruby -*-
 # vi: set ft=ruby :
-
-Vagrant::Config.run do |config|
-  config.vm.define :centos do |config|
-    config.vm.box = "centos-64"
-    config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box"
+#
+Vagrant.configure('2') do |config|
+  config.vm.define :centos do |m|
+    m.vm.box = "centos-64"
+    m.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/centos-64-x64-vbox4210.box"
   end
 
-
-  config.vm.define :ubuntu do |config|
-    config.vm.box = "ubuntu1204"
-    config.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box"
+  config.vm.define :ubuntu do |m|
+    m.vm.box = "ubuntu1204"
+    m.vm.box_url = "http://puppet-vagrant-boxes.puppetlabs.com/ubuntu-server-12042-x64-vbox4210.box"
   end
 
   config.vm.provision :puppet do |puppet|
